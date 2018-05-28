@@ -6,28 +6,50 @@
   <br>
 </h1>
 
-## 基本规则
+## 基本的格式化
 
-### JS
+* **使用两个空格进行缩进**
 
-* 区分大小写
-* JS中变量驼峰命名(常量的形式如: NAMES THIS)
-* 使用单引号
-* 不混用空格和Tab
-* 去掉行末的空格(vs code快捷键ctrl k ctrl x)
-* 同一行上插入大括号
-* 使用两个空格进行缩进
+```js
+  function hello (name) {
+    console.log('hi', name)
+  }
+```
 
-### HTML
+* **语句结尾不使用分号**
 
-* 一般小写
-* 命名一般使用 abcd-efgh
-* 使用双引号
+```js
+  console.log('hi', name) // √
+  console.log('hi', name); // ×
+```
 
-### CSS
+* **单行长度不超过80个字符**
 
-* 一般小写
-* 命名一般使用 abcd-efgh
-* 使用双引号
+```js
+  helloWorld (doc, element, window, 'some string value', true, 123, navigator,
+    parameter1) // √
+  helloWorld (doc, element, window, 'some string value', true, 123, navigator, parameter1) // ×
+```
 
-## 编码风格（Shinetek）
+* **在运算符后换行，下一行增加一个层级的缩进**
+
+```js
+  helloWorld (doc, element, window, 'some string value', true, 123, navigator,
+    parameter1) // √
+  helloWorld (doc, element, window, 'some string value', true, 123, navigator,
+  parameter1) // × 第二行没有缩进
+  helloWorld (doc, element, window, 'some string value', true, 123, navigator
+    ,parameter1) // × 在运算符之前换行了
+```
+
+* **不允许有连续多行空行**
+
+  正确的做法
+  * 在方法之间
+  * 在方法中的局部变量和第一条语句之间
+  * 在多行或单行注释之前
+  * 在方法内的逻辑片段之间
+
+* **命名**
+
+* 
