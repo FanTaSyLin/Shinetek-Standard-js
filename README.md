@@ -212,13 +212,13 @@
 
 # 注释遵循JSDoc标准
 
-  [![JSDoc3](public\jsdoc.png)](http://www.css88.com/doc/jsdoc/index.html)
+  [![JSDoc3](/public/jsdoc.png)](http://www.css88.com/doc/jsdoc/index.html)
 
   这是 JavaScript [注释规范](http://www.css88.com/doc/jsdoc/index.html) 的全文。
 
 # Javascript代码格式化统一使用JavaScript Standard Style
 
-[![js-standard-style](public\standard.png)](https://github.com/standard/standard)
+[![js-standard-style](/public/standard.png)](https://github.com/standard/standard)
 
 这是 JavaScript [standard](https://github.com/standard/standard) 代码规范的全文。
 
