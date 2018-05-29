@@ -239,13 +239,13 @@
 编辑器配置
 
 ```json
-{
-  "editor.wordWrapColumn": 80,
+  {
+    "editor.wordWrapColumn": 80,
     "editor.tabSize": 2,
     "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "indent",
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-}
+  }
 ```
 
 ### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
