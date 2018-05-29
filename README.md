@@ -170,16 +170,16 @@
 ```js
   (function () {
     window.alert('ok')
-  })() // avoid
+  })() // bad
 
   ;(function () {
     window.alert('ok')
-  })() // ok
+  })() // good
 
-  'hello'.indexOf('o') // avoid
+  'hello'.indexOf('o') // bad
 
   var str = 'hello'
-  str.indexOf('o') // ok
+  str.indexOf('o') // good
 ```
 
 # 其他
