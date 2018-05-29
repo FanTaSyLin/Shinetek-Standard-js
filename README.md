@@ -214,7 +214,7 @@
 
   [![JSDoc3](/public/jsdoc.png)](http://www.css88.com/doc/jsdoc/index.html)
 
-  这是 JavaScript [注释规范](http://www.css88.com/doc/jsdoc/index.html) 的全文。
+  这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
 
 # Javascript代码格式化统一使用JavaScript Standard Style
 
