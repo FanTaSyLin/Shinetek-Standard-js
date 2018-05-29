@@ -254,3 +254,5 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
  自带 `standard` 规范。
 
 但是如果你仍然想自己动手配置，[那么请看此教程][webstorm-1]。此教程适用于 JetBrains 全家桶，包括 PhpStorm、IntelliJ、RubyMine 等。
+
+[webstorm-1]: webstorm.md
