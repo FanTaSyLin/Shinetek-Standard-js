@@ -75,7 +75,7 @@
 * **常量大写并且使用 _ 分割 定义在文件头部**
 
 ```js
-  const leftTopLat = 90 // bad
+  const leftTopLat = 90 // bad
   const LEFT_TOP_LAT = 90 // good
 ```
 
