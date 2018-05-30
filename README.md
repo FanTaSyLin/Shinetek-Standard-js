@@ -1,13 +1,25 @@
 <h1 align="center">
-    <img src="./public/logo.png" alt="Standard - JavaScript Style Guide" width="200">
+    <img src="./public/logo.png" alt="Standard - Shinetek Style Guide" width="200">
   <br>
   Shinetek 软件编程规范
   <br>
   <br>
 </h1>
 
-[<img height=100 src="./public/js.jpg">](./doc/standard-js.md)|[<img height=100 src="./public/python2.jpg">](./doc/standard-python.md)|[<img height=100 src="./public/git2.jpg">](./doc/standard-git.md)|[<img height=100 src="./public/csharp.jpg">](./doc/standard-csharp.md)|
-|---|---|---|---|---|
+<div align="center">
+  <a herf="./doc/standard-js.md" style="margin: 5px 10px">
+    <img src="./public/js.jpg" alt="Standard - Shinetek Style Guide" height="100">
+  </a>
+  <a herf="./doc/standard-python.md" style="margin: 5px 10px">
+    <img src="./public/python2.jpg" alt="Standard - Shinetek Style Guide" height="100">
+  </a>
+  <a herf="./doc/standard-csharp.md" style="margin: 5px 10px">
+    <img src="./public/csharp.jpg" alt="Standard - Shinetek Style Guide" height="100">
+  </a>
+  <a herf="./doc/standard-git.md" style="margin: 5px 10px">
+    <img src="./public/git2.jpg" alt="Standard - Shinetek Style Guide" height="100">
+  </a>
+</div>
 
 <!-- <h2 align="left">
     <img src="./public/js.jpg" alt="Standard - JavaScript Style Guide" width="20">
