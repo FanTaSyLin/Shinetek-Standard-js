@@ -28,10 +28,10 @@
 
 ## 第二步 创建本地分支
 
-每次**开发新功能**或是**问题修复**，都应该新建一个单独的分支（这方面可以参考 分支管理策略）。
+每次**开发新功能**或是**问题修复**，都应该新建一个单独的分支（这方面可以参考 [分支管理策略](#Branch-Manager)）。
 
 ```ssh
-  $git checkout -b feature-Cloud-Animation
+  $git checkout -b feature-xxxxx
 
   $git checkout -b fixbug-xxxxx
 ```
@@ -49,21 +49,51 @@
 分支的开发过程中，要经常与 **develop** 保持同步
 
 ```ssh
-  $git pull origin develop:develop
-  $git merge develop
+  $git checkout develop // 切换到develop主干
+  $git pull // 更新 develop
+  $git checkout feature-xxxxx // 切换回你的分支
+  $git merge develop // 将 develop 合并到你的分支
 ```
 
-## 第五步 处理冲突
+* 如果在合并 develop 的过程中出现代码冲突，利用编辑器自带的工具解决
+* 推送到gitlab前必须进行一次同步，确保代码与主干一致
 
 ## 第六步 本地测试通过后，推送到gitlab
 
+编码完成后，就可以推送当前分支到远程仓库了。
+
+```ssh
+  $git push --set-upstream origin feature-xxxxx
+```
+
 ## 第七步 发起合并请求到develop
+
+提交到远程仓库以后，就可以发出 **Pull Request** 到 **develop** 分支，然后请求别人进行代码review，通过审核和方可并入 **develop** 分支
+
+具体操作如下：
+
+![step1](../public/gitlab_operate_01.JPG)
+
+* **注意源和目标不要选错，把A合并到B Source 选 A、Target 选 B**
+
+![step2](../public/gitlab_operate_02.JPG)
+
+注意以下几点：
+
+* Description 写清楚你提交的这个分支都干了哪些事儿，逐条列明，便于他人审核
+* Assignee 选择一个 负责审核代码的成员（选填, 也可口头通知）
+* Remove source branch when merge request is accepted. 审核通过并执行合并请求后自动删除源分支（建议勾选）
+
+![step3](../public/gitlab_operate_03.JPG)
 
 ## 第八步 合并通过后删除本地分支
 
-# git 常用命令
+```ssh
+  $git branch -d <BranchName> // 删除本地分支
+  $git remote prune origin  // 清除远程已经删除的分支
+```
 
-# 分支管理策略
+# 分支管理策略 <span id="Branck-Manager"></span>
 
 请参考以下分支管理策略对软件版本进行管理。它可以使得版本库的演进保持简洁，主干清晰，各个分支各司其职、井井有条。理论上，这些策略对所有的版本管理系统都适用，Git只是用来举例而已。
 
