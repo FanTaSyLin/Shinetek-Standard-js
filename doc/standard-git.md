@@ -17,14 +17,50 @@
 
 ## 第一步 拉取 develop 到本地
 
+```ssh
+  //首次获取代码
+  $git clone git@10.24.4.139:D5/orbscjs.git
+
+  //持续开发过程中
+  $git checkout develop
+  $git pull
+```
+
 ## 第二步 创建本地分支
 
-## 第三步 编码并保持Commit
+每次**开发新功能**或是**问题修复**，都应该新建一个单独的分支（这方面可以参考 分支管理策略）。
 
-## 第四部 同步 develop 至最新版本
+```ssh
+  $git checkout -b feature-Cloud-Animation
 
- 
-  
+  $git checkout -b fixbug-xxxxx
+```
+
+## 第三步 编码并保持Commit
+
+日常开发时保持在新建的本地分支中进行。中断开发记得提交修改
+
+```ssh
+  $git commit -m "描述提交内容"
+```
+
+## 第四步 保持与 develop 的同步
+
+分支的开发过程中，要经常与 **develop** 保持同步
+
+```ssh
+  $git pull origin develop:develop
+  $git merge develop
+```
+
+## 第五步 处理冲突
+
+## 第六步 本地测试通过后，推送到gitlab
+
+## 第七步 发起合并请求到develop
+
+## 第八步 合并通过后删除本地分支
+
 # git 常用命令
 
 # 分支管理策略
@@ -53,5 +89,11 @@
 
 ![feature branch](../public/git_feature_01.png)
 
-## gitlab中的设置
+## 修补bug分支
 
+* 已提交的代码难免会出现bug，这时就需要创建一个分支对bug进行修复。
+* 修补bug分支的名字采用 fixbug-* 的形式命名
+
+![fixbug branch](../public/git_fixbug_01.png)
+
+## gitlab中的设置
