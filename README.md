@@ -6,7 +6,7 @@
   <br>
 </h1>
 <br>
-<div align="center">
+<!-- <div align="center">
   <a herf="./doc/standard-js.md" style="margin: 5px 20px">
     <img src="./public/js.jpg" alt="Standard - Shinetek Style Guide" height="100">
   </a>
@@ -19,14 +19,13 @@
   <a herf="./doc/standard-git.md" style="margin: 5px 20px">
     <img src="./public/git2.jpg" alt="Standard - Shinetek Style Guide" height="100">
   </a>
+</div> -->
+
+<div align="center">
+
+[<img src="./public/js.jpg" width=100>](./doc/standard-js.md) | [<img src="./public/pythont.jpg" width=100>](./doc/standard-python.md) | [<img src="./public/csharp.jpg" width=100>](./doc/standard-csharp.md) | [<img src="./public/git.jpg" width=100>](./doc/standard-git.md)
+|----|----|----|----|
+
 </div>
 
 # 说明
-
-## 测试同步主干
-
-## 测试同步主干2
-
-## 测试同步主干3
-
-## 测试同步主干4
