@@ -211,13 +211,7 @@
   $("<div class='box'></div>") // good
 ```
 
-# 注释遵循JSDoc标准
-
-  [![JSDoc3](/public/jsdoc.png)](http://www.css88.com/doc/jsdoc/index.html)
-
-  这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
-
-# Javascript代码格式化统一使用JavaScript Standard Style
+# 更多代码风格，参考[JavaScript Standard Style](https://github.com/standard/standard)
 
 [![js-standard-style](/public/standard.png)](https://github.com/standard/standard)
 
@@ -225,9 +219,15 @@
 
 掌握本规范的最好方法是安装并在自己的代码中使用它。
 
-## 编辑器配置及安装
+# 注释遵循JSDoc标准
 
-### Visual Studio Code
+  [![JSDoc3](/public/jsdoc.png)](http://www.css88.com/doc/jsdoc/index.html)
+
+  这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
+
+# 编辑器配置及安装
+
+## Visual Studio Code
 
 安装 **[vscode-standardjs][vscode-1]**（已经包含了自动格式化）。
 > npm install standard --global 插件安装完后记得运行此命令
@@ -252,7 +252,7 @@
   }
 ```
 
-### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
+## WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
 
 WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)在其 IDE 中
  自带 `standard` 规范。
