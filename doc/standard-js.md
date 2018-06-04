@@ -225,6 +225,41 @@
 
   这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
 
+## 变量、常量的注释
+
+```js
+/**
+ * 描述此常量的作用(含义)
+ * @type {string}
+ * @default
+*/
+const RED = 'FF0000';
+
+/**
+ * 描述此变量的作用(含义)
+ * @type {(string|Array.<string>)}
+*/
+var foo= 'foo';
+```
+
+* @type, 用于标识可能包含的值的类型；
+* @default, 记录默认值。通过添加@default标签，常量的数值将自动添加到文档；
+
+## 函数注释
+
+```js
+function 
+```
+
+## 类注释
+
+## 模块的注释
+
+## 文件注释
+
+## callback注释
+
+
 # 编辑器配置及安装
 
 ## Visual Studio Code
