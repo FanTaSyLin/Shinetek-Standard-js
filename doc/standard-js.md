@@ -230,8 +230,11 @@
 ### Visual Studio Code
 
 安装 **[vscode-standardjs][vscode-1]**（已经包含了自动格式化）。
+> npm install standard --global 插件安装完后记得运行此命令
 
-安装 **[vscode-standardjs-snippets][vscode-2]** 以获得 JS snippets。安装 **[vscode-react-standard][vscode-3]** 以获得 React snippets。
+安装 **[vscode-standardjs-snippets][vscode-2]** 以获得 JS snippets。
+
+安装 **[vscode-react-standard][vscode-3]** 以获得 React snippets。
 
 [vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
