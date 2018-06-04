@@ -221,7 +221,7 @@
 
 # 注释遵循JSDoc标准
 
-  [![JSDoc3](/public/jsdoc.png)](http://www.css88.com/doc/jsdoc/index.html)
+  [![JSDoc3](/public/jsdoc.png)](http://ww.css88.com/doc/jsdoc/index.html)
 
   这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
 
@@ -233,31 +233,163 @@
  * @type {string}
  * @default
 */
-const RED = 'FF0000';
+const RED = 'FF0000'
 
 /**
  * 描述此变量的作用(含义)
  * @type {(string|Array.<string>)}
 */
-var foo= 'foo';
+var foo= 'foo'
 ```
 
-* @type, 用于标识可能包含的值的类型；
-* @default, 记录默认值。通过添加@default标签，常量的数值将自动添加到文档；
+* @type, 用于标识可能包含的值的类型;
+* @default, 记录默认值。通过添加@default标签，常量的数值将自动添加到文档;
 
 ## 函数注释
 
+参数或返回值为 javascript 内置类型时
+
 ```js
-function 
+/**
+ * @param {string} param1 - 参数1说明
+ * @param {number} param2 - 参数2说明
+ * @returns {boolean} - 返回值的说明
+ * @desc 函数的功能说明
+ */
+function foo (param1, param2) {
+  var res = doSomething()
+  return res
+}
+```
+
+* @desc, 如果在注释开始的地方添加描述，那么可省略@desc标签;
+* @param, 提供了对某个函数的参数的各项说明，包括参数名、参数数据类型、描述等;
+* @returns, 标签描述一个函数的返回值。语法和@param类似;
+
+参数或返回值为 自定义类型时
+
+```js
+/**
+ * @typedef circle
+ * @property {object} centre - 圆心
+ * @property {number} centre.x -  圆心的x坐标值
+ * @property {number} centre.y - 圆心的y坐标值
+ * @property {number} radius - 半径
+ */
+
+/**
+ * @typedef info
+ * @property {number} area - 面积
+ * @property {number} perimeter - 周长
+ */
+
+/**
+ * 函数的功能说明
+ * @param {circle} - 圆
+ * @returns {info} - 圆属性
+ */
+function foo (circle) {
+  var res = doSomething()
+  return res
+}
+```
+
+* @typedef, 记录一个自定义的类型, 如果你要反复引用它们的时候;
+* @property, 记录一个对象的属性, 支持嵌套;
+
+## callback注释
+
+描述一个指定类的回掉函数
+
+```js
+/**
+ * @class
+ */
+function Requester() {}
+
+/**
+ * Send a request.
+ * @param {Requester~requestCallback} cb - The callback that handles the response.
+ */
+Requester.prototype.send = function(cb) {
+    // code
+};
+
+/**
+ * This callback is displayed as part of the Requester class.
+ * @callback Requester~requestCallback
+ * @param {number} responseCode
+ * @param {string} responseMessage
+ */
+```
+
+描述一个全局的回掉函数
+
+```js
+/**
+ * @class
+ */
+function Requester() {}
+
+/**
+ * Send a request.
+ * @param {requestCallback} cb - The callback that handles the response.
+ */
+Requester.prototype.send = function(cb) {
+    // code
+};
+
+/**
+ * This callback is displayed as a global member.
+ * @callback requestCallback
+ * @param {number} responseCode
+ * @param {string} responseMessage
+ */
 ```
 
 ## 类注释
 
+```js
+/**
+ * 类代表一个点
+ */
+class Point {
+
+  /**
+   * 创建一个点
+   * @param {number} x - x坐标值
+   * @param {number} y - y坐标值 
+   */
+  constructor (x, y) {
+    this.x = x
+    this.y = y
+    /**
+     * 获取 point 的字符串
+     * @returns {string}
+     */
+    this.toString = function () {
+      return '(' + this.x + ', ' + this.y + ')'
+    }
+    /**
+     * 获取 x坐标值
+     * @returns {number}
+     */
+    this.getX = function () {
+      return this.x
+    }
+  }
+}
+
+var p = new Point()
+```
+
 ## 模块的注释
 
-## 文件注释
+```js
 
-## callback注释
+```
+
+## 文件注释
 
 
 # 编辑器配置及安装
@@ -284,6 +416,7 @@ function
     "editor.wordWrap": "wordWrapColumn",
     "editor.wrappingIndent": "indent",
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "javascript.format.insertSpaceAfterConstructor": true
   }
 ```
 
