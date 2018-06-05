@@ -10,7 +10,7 @@ class Point {
    * @param {number} x - x坐标值
    * @param {number} y - y坐标值
    */
-  constructor(x, y) {
+  constructor (x, y) {
     this.x = x
     this.y = y
     /**
