@@ -458,7 +458,7 @@ var p = new Point()
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
 [vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
-编辑器配置
+### 编辑器配置
 
 ```json
   {
@@ -469,6 +469,30 @@ var p = new Point()
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
     "javascript.format.insertSpaceAfterConstructor": true
   }
+```
+
+### 为 git 添加 pre-commit 钩子
+
+* 在本地仓库文件夹下找到 .git 文件夹
+* 在 .git/hooks 目录下创建 pre-commit 文件
+* 将以下代码拷贝到 pre-commit 文件中
+
+```ssh
+#!/bin/bash
+
+# 确保将要提交的所有 JavaScript 代码通过 standard 规范的检查
+function xargs-r() {
+  # Portable version of "xargs -r". The -r flag is a GNU extension that
+  # prevents xargs from running if there are no input files.
+  if IFS= read -r -d $'\n' path; then
+    { echo "$path"; cat; } | xargs $@
+  fi
+}
+git diff --name-only --cached --relative | grep '\.jsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t standard
+if [[ $? -ne 0 ]]; then
+  echo 'JavaScript Standard Style errors were detected. Aborting commit.'
+  exit 1
+fi
 ```
 
 ## WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
