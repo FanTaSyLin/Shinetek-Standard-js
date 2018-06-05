@@ -1,13 +1,13 @@
 /**
  * @class
  * @desc 创建一个点
- * @param {number} x - x坐标值
+ * @param {number} x - x坐标值
  * @param {number} y - y坐标值
  */
 class Point {
   /**
    * @desc 创建一个点
-   * @param {number} x - x坐标值
+   * @param {number} x - x坐标值
    * @param {number} y - y坐标值
    */
   constructor (x, y) {

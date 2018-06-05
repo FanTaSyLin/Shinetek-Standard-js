@@ -104,7 +104,7 @@
   } ()) // good
 ```
 
-* **分支超过4种的 if else 使用 switch case, switch case需要带default**
+* **分支超过4种的 if else 使用 switch case, switch case需要带default**
 
 ```js
   function fn (x) {
@@ -405,7 +405,7 @@ class Point {
 
   /**
    * 创建一个点
-   * @param {number} x - x坐标值
+   * @param {number} x - x坐标值
    * @param {number} y - y坐标值
    */
   constructor (x, y) {
