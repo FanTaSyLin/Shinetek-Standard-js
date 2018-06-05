@@ -358,7 +358,7 @@ class Point {
   /**
    * 创建一个点
    * @param {number} x - x坐标值
-   * @param {number} y - y坐标值 
+   * @param {number} y - y坐标值
    */
   constructor (x, y) {
     this.x = x
@@ -391,6 +391,9 @@ var p = new Point()
 
 ## 文件注释
 
+```js
+
+```
 
 # 编辑器配置及安装
 
