@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-# 格式化
+# 常用规则
 
 * **使用两个空格进行缩进**
 
@@ -44,8 +44,6 @@
   * 在多行或单行注释之前
   * 在方法内的逻辑片段之间
 
-# 命名
-
 * **采用驼峰命名**
 
 ```js
@@ -79,8 +77,6 @@
   const leftTopLat = 90 // bad
   const LEFT_TOP_LAT = 90 // good
 ```
-
-# 函数
 
 * **函数的参数不得超过5个，多于5个使用objectType代替**
 
@@ -155,8 +151,6 @@
   if (x !== 1) {} // good
 ```
 
-# 分号
-
 * **不使用分号**
 
 ```js
@@ -182,8 +176,6 @@
   var str = 'hello'
   str.indexOf('o') // good
 ```
-
-# 其他
 
 * **使用严格模式，但禁止使用全局严格模式**
 
@@ -211,6 +203,58 @@
   $("<div class='box'></div>") // good
 ```
 
+* **不要丢掉异常处理中 err 参数**
+
+```js
+run(function (err) {
+  if (err) throw err
+  window.alert('done')
+}) // good
+
+run(function (err) {
+  window.alert('done')
+}) // bad
+```
+
+* **使用浏览器全局变量时加上 window. 前缀**
+
+```js
+window.alert('hi') // good
+
+alert('hi') // bad
+```
+
+* **每个 var 关键字单独声明一个变量**
+
+```js
+var silent = true
+var verbose = true //good
+
+var silent = true, verbose = true // bad
+```
+
+* **嵌套的代码块中禁止再定义函数**
+
+```js
+if (authenticated) {
+  function setAuthUser () {}
+} // bad
+```
+
+* **使用 __dirname 和 __filename 时尽量避免使用字符串拼接**
+
+```js
+const pathToFile = __dirname + '/app.js' // bad
+const pathToFile = path.join(__dirname, 'app.js') // good
+```
+
+* **用 throw 抛错时，抛出 Error 对象而不是字符串**
+
+```js
+throw 'error' // bad
+throw new Error('error') //good
+```
+
 # 更多代码风格，参考[JavaScript Standard Style](https://github.com/standard/standard)
 
 [![js-standard-style](/public/standard.png)](https://github.com/standard/standard)
@@ -225,7 +269,7 @@
 
   这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
 
-## 变量、常量的注释
+* 变量、常量的注释
 
 ```js
 /**
@@ -242,10 +286,11 @@ const RED = 'FF0000'
 var foo= 'foo'
 ```
 
-* @type, 用于标识可能包含的值的类型;
-* @default, 记录默认值。通过添加@default标签，常量的数值将自动添加到文档;
+> @type, 用于标识可能包含的值的类型;
+>
+> @default, 记录默认值。通过添加@default标签，常量的数值将自动添加到文档;
 
-## 函数注释
+* 函数注释
 
 参数或返回值为 javascript 内置类型时
 
@@ -262,9 +307,11 @@ function foo (param1, param2) {
 }
 ```
 
-* @desc, 如果在注释开始的地方添加描述，那么可省略@desc标签;
-* @param, 提供了对某个函数的参数的各项说明，包括参数名、参数数据类型、描述等;
-* @returns, 标签描述一个函数的返回值。语法和@param类似;
+> @desc, 如果在注释开始的地方添加描述，那么可省略@desc标签;
+>
+> @param, 提供了对某个函数的参数的各项说明，包括参数名、参数数据类型、描述等;
+>
+> @returns, 标签描述一个函数的返回值。语法和@param类似;
 
 参数或返回值为 自定义类型时
 
@@ -294,10 +341,11 @@ function foo (circle) {
 }
 ```
 
-* @typedef, 记录一个自定义的类型, 如果你要反复引用它们的时候;
-* @property, 记录一个对象的属性, 支持嵌套;
+> @typedef, 记录一个自定义的类型, 如果你要反复引用它们的时候;
+>
+> @property, 记录一个对象的属性, 支持嵌套;
 
-## callback注释
+* callback注释
 
 描述一个指定类的回掉函数
 
@@ -347,7 +395,7 @@ Requester.prototype.send = function(cb) {
  */
 ```
 
-## 类注释
+* 类注释
 
 ```js
 /**
