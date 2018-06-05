@@ -458,7 +458,7 @@ var p = new Point()
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
 [vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
 
-### 编辑器配置
+编辑器配置
 
 ```json
   {
@@ -471,7 +471,16 @@ var p = new Point()
   }
 ```
 
-### 为 git 添加 pre-commit 钩子
+## WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
+
+WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)在其 IDE 中
+ 自带 `standard` 规范。
+
+但是如果你仍然想自己动手配置，[那么请看此教程][webstorm-1]。此教程适用于 JetBrains 全家桶，包括 PhpStorm、IntelliJ、RubyMine 等。
+
+[webstorm-1]: /doc/webstorm.md
+
+## 为 git 添加 pre-commit 钩子
 
 * 在本地仓库文件夹下找到 .git 文件夹
 * 在 .git/hooks 目录下创建 pre-commit 文件
@@ -494,12 +503,3 @@ if [[ $? -ne 0 ]]; then
   exit 1
 fi
 ```
-
-## WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
-
-WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)在其 IDE 中
- 自带 `standard` 规范。
-
-但是如果你仍然想自己动手配置，[那么请看此教程][webstorm-1]。此教程适用于 JetBrains 全家桶，包括 PhpStorm、IntelliJ、RubyMine 等。
-
-[webstorm-1]: /doc/webstorm.md
