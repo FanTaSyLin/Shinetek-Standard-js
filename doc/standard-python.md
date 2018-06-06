@@ -1,8 +1,3 @@
-<h1 align="center">
-  <img src="../public/pythont.jpg" alt="Standard - Python Style Guide" width="200">
-  <br>
-  <br>
-  Python 编码规范
-  <br>
-  <br>
-</h1>
+# <a><img src="../public/pythont_min.jpg" align="absmiddle"/> Python 编码规范</a>
+
+## 待完成

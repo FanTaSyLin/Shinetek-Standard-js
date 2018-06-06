@@ -1,15 +1,8 @@
-<h1 align="center">
-  <img src="../public/js.jpg" alt="Standard - JavaScript Style Guide" width="100">
-  <br>
-  <br>
-  JavaScript 编码规范
-  <br>
-  <br>
-</h1>
+# <a><img src="../public/js_min.jpg" align="absmiddle"/> JavaScript 编码规范</a>
 
-# 常用规则
+## 常用规则
 
-* **使用两个空格进行缩进**
+### 使用两个空格进行缩进
 
 ```js
   function hello (name) {
@@ -17,7 +10,7 @@
   }
 ```
 
-* **单行长度不超过80个字符**
+### 单行长度不超过80个字符
 
 ```js
   helloWorld (doc, element, window, 'some string value', true, 123, navigator,
@@ -36,7 +29,7 @@
     ,parameter1) // bad 在运算符之前换行了
 ```
 
-* **不允许有连续多行空行**
+### 不允许有连续多行空行
 
   正确的做法
   * 在方法之间
@@ -44,14 +37,14 @@
   * 在多行或单行注释之前
   * 在方法内的逻辑片段之间
 
-* **采用驼峰命名**
+### 采用驼峰命名
 
 ```js
   var my_variable = undefinded // bad
   var myVariable = undefinded // good
 ```
 
-* **私有变量变量函数前置 _ 标识**
+### 私有变量变量函数前置 _ 标识
 
 ```js
   MyConstructor.prototype.private = function(){}; // bad
@@ -61,7 +54,7 @@
 
 ```
 
-* **构造器首字母大写**
+### 构造器首字母大写
 
 ```js
   function classA () {}
@@ -71,14 +64,14 @@
   ClassA.prototype.functionA = function () {} // good
 ```
 
-* **常量大写并且使用 _ 分割 定义在文件头部**
+### 常量大写并且使用 _ 分割 定义在文件头部
 
 ```js
   const leftTopLat = 90 // bad
   const LEFT_TOP_LAT = 90 // good
 ```
 
-* **函数的参数不得超过5个，多于5个使用objectType代替**
+### 函数的参数不得超过5个，多于5个使用objectType代替
 
 ```js
   function myTestFunc (a,b,c,d,e,f,g,h) {
@@ -92,7 +85,7 @@
   } // good
 ```
 
-* **立即执行函数，用 () 包裹**
+### 立即执行函数，用 () 包裹
 
 ```js
   var value = function () {
@@ -104,7 +97,7 @@
   } ()) // good
 ```
 
-* **分支超过4种的 if else 使用 switch case, switch case需要带default**
+### 分支超过4种的 if else 使用 switch case, switch case需要带default**
 
 ```js
   function fn (x) {
@@ -142,7 +135,7 @@
   } // good
 ```
 
-* **禁止使用 == != 一律使用 === !==**
+### 禁止使用 == != 一律使用 === !==
 
 ```js
   if (x == 0) {} // bad
@@ -151,14 +144,14 @@
   if (x !== 1) {} // good
 ```
 
-* **不使用分号**
+### 不使用分号
 
 ```js
   console.log('hi', name) // good
   console.log('hi', name); // bad
 ```
 
-* **不要使用 (  [  or ` 等作为一行的开始**
+### 不要使用 (  [  or ` 等作为一行的开始
 
   在没有分号的情况下代码压缩后会导致报错，而坚持这一规范则可避免出错
 
@@ -177,7 +170,7 @@
   str.indexOf('o') // good
 ```
 
-* **使用严格模式，但禁止使用全局严格模式**
+### 使用严格模式，但禁止使用全局严格模式
 
 ```js
   'use strict'
@@ -195,7 +188,7 @@
   }()) // good
 ```
 
-* **除非转义需要，字符串统一使用单引号**
+### 除非转义需要，字符串统一使用单引号
 
 ```js
   console.log('hello world') // good
@@ -203,7 +196,7 @@
   $("<div class='box'></div>") // good
 ```
 
-* **不要丢掉异常处理中 err 参数**
+### 不要丢掉异常处理中 err 参数
 
 ```js
 run(function (err) {
@@ -216,7 +209,7 @@ run(function (err) {
 }) // bad
 ```
 
-* **使用浏览器全局变量时加上 window. 前缀**
+### 使用浏览器全局变量时加上 window. 前缀
 
 ```js
 window.alert('hi') // good
@@ -224,7 +217,7 @@ window.alert('hi') // good
 alert('hi') // bad
 ```
 
-* **每个 var 关键字单独声明一个变量**
+### 每个 var 关键字单独声明一个变量
 
 ```js
 var silent = true
@@ -233,7 +226,7 @@ var verbose = true //good
 var silent = true, verbose = true // bad
 ```
 
-* **嵌套的代码块中禁止再定义函数**
+### 嵌套的代码块中禁止再定义函数
 
 ```js
 if (authenticated) {
@@ -241,7 +234,7 @@ if (authenticated) {
 } // bad
 ```
 
-* **使用 __dirname 和 __filename 时尽量避免使用字符串拼接**
+### 使用 __dirname 和 __filename 时尽量避免使用字符串拼接
 
 ```js
 const pathToFile = __dirname + '/app.js' // bad
@@ -255,7 +248,7 @@ throw 'error' // bad
 throw new Error('error') //good
 ```
 
-# 更多代码风格，参考[JavaScript Standard Style](https://github.com/standard/standard)
+### 更多代码风格，参考[JavaScript Standard Style](https://github.com/standard/standard)
 
 [![js-standard-style](/public/standard.png)](https://github.com/standard/standard)
 
@@ -263,13 +256,13 @@ throw new Error('error') //good
 
 掌握本规范的最好方法是安装并在自己的代码中使用它。
 
-# 注释遵循JSDoc标准
+## 注释遵循JSDoc标准
 
   [![JSDoc3](/public/jsdoc.png)](http://ww.css88.com/doc/jsdoc/index.html)
 
   这是 JavaScript [JSDoc](http://www.css88.com/doc/jsdoc/index.html) 注释规范的全文。
 
-* 变量、常量的注释
+### 变量、常量的注释
 
 ```js
 /**
@@ -290,7 +283,7 @@ var foo= 'foo'
 >
 > @default, 记录默认值。通过添加@default标签，常量的数值将自动添加到文档;
 
-* 函数注释
+### 函数注释
 
 参数或返回值为 javascript 内置类型时
 
@@ -345,7 +338,7 @@ function foo (circle) {
 >
 > @property, 记录一个对象的属性, 支持嵌套;
 
-* callback注释
+### callback注释
 
 描述一个指定类的回掉函数
 
@@ -395,7 +388,7 @@ Requester.prototype.send = function(cb) {
  */
 ```
 
-* 类注释
+### 类注释
 
 ```js
 /**
@@ -431,21 +424,21 @@ class Point {
 var p = new Point()
 ```
 
-## 模块的注释
+### 模块的注释
 
 ```js
 
 ```
 
-## 文件注释
+### 文件注释
 
 ```js
 
 ```
 
-# 编辑器配置及安装
+## 编辑器配置及安装
 
-## Visual Studio Code
+### Visual Studio Code
 
 安装 **[vscode-standardjs][vscode-1]**（已经包含了自动格式化）。
 > npm install standard --global 插件安装完后记得运行此命令
@@ -471,7 +464,7 @@ var p = new Point()
   }
 ```
 
-## WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
+### WebStorm (PhpStorm, IntelliJ, RubyMine, JetBrains 等 jetbrains 全家桶系列)
 
 WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-2017-1-eap-171-2272/)在其 IDE 中
  自带 `standard` 规范。
@@ -480,7 +473,7 @@ WebStorm [最近宣布](https://blog.jetbrains.com/webstorm/2017/01/webstorm-201
 
 [webstorm-1]: /doc/webstorm.md
 
-## 为 git 添加 pre-commit 钩子
+### 为 git 添加 pre-commit 钩子
 
 * 在本地仓库文件夹下找到 .git 文件夹
 * 在 .git/hooks 目录下创建 pre-commit 文件

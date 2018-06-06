@@ -1,13 +1,6 @@
-<h1 align="center">
-  <img src="../public/git.jpg" alt="Standard - Version Control" width="200">
-  <br>
-  <br>
-  版本控制操作规范
-  <br>
-  <br>
-</h1>
+# <a><img src="../public/git_min.jpg" align="absmiddle"/> 版本控制操作规范</a>
 
-# git 使用流程规范
+## git 使用流程规范
 
 团队开发中，遵循一个合理、清晰的Git使用流程，是非常重要的。
 
@@ -20,7 +13,7 @@
 
 <font color=#CC3333  size=4 face="黑体">★ 团队协作开发时必须遵从以下规则。</font>
 
-## 第一步 拉取 master 到本地
+### 第一步 拉取 master 到本地
 
 ```ssh
   //首次获取代码
@@ -32,7 +25,7 @@
   $git pull
 ```
 
-## 第二步 创建本地分支
+### 第二步 创建本地分支
 
 每次**开发新功能**或是**问题修复**，都应该新建一个单独的分支（这方面可以参考 [分支管理策略](#Branch-Manager)）。
 
@@ -44,7 +37,7 @@
   $git checkout -b dev-xxxxx
 ```
 
-## 第三步 编码并保持Commit
+### 第三步 编码并保持Commit
 
 日常开发时保持在新建的本地分支中进行。中断开发时记得提交修改
 
@@ -52,7 +45,7 @@
   $git commit -m "描述提交内容"
 ```
 
-## 第四步 保持与 master 的同步
+### 第四步 保持与 master 的同步
 
 分支的开发过程中，要经常与 **master** 保持同步
 
@@ -66,7 +59,7 @@
 * 如果在合并 master 的过程中出现代码冲突，利用编辑器自带的工具解决
 * 推送到gitlab前必须进行一次同步，确保代码与主干一致
 
-## 第六步 本地测试通过后，推送到gitlab
+### 第六步 本地测试通过后，推送到gitlab
 
 编码完成后，就可以推送当前分支到远程仓库了。
 
@@ -78,7 +71,7 @@
   $git push --set-upstream origin dev-xxxxx
 ```
 
-## 第七步 发起合并请求到develop
+### 第七步 发起合并请求到develop
 
 提交到远程仓库以后，就可以发出 **Merge Request** 到 **master** 分支，然后请求别人进行代码review，通过审核和方可并入 **master** 分支
 
@@ -98,18 +91,18 @@
 
 ![step3](../public/gitlab_operate_03.JPG)
 
-## 第八步 合并通过后删除本地分支
+### 第八步 合并通过后删除本地分支
 
 ```ssh
   $git branch -d <BranchName> // 删除本地分支
   $git remote prune origin  // 在本地仓库中清除远程已经删除的分支
 ```
 
-# 分支管理策略 <span id="Branck-Manager"></span>
+## 分支管理策略 <span id="Branck-Manager"></span>
 
 请参考以下分支管理策略对软件版本进行管理。它可以使得版本库的演进保持简洁，主干清晰，各个分支各司其职、井井有条。理论上，这些策略对所有的版本管理系统都适用。
 
-## 主干分支
+### 主干分支
 
 * 代码库应该有一个、且仅有一个主分支。所有提供给用户使用的正式版本，都在这个主分支上发布。
   > master分支的更新与产品的发布是一致的。也就是说，master分支的最新代码，默认就是当前的线上代码
@@ -124,7 +117,7 @@
 
 ![master branch](../public/git_master_01.png)
 
-## 日常开发分支
+### 日常开发分支
 
 * 为了开发特定功能或修复bug，从 **master** 上面分出来的。开发完成后，要再并入 **master**
 * 功能分支的名字，采用 feature-* / fixbug-* / dev-* 的形式命名
@@ -137,7 +130,7 @@
 
 ![feature branch](../public/git_feature_01.png) | ![fixbug branch](../public/git_fixbug_01.png) |----|----|
 
-## 关于工作流程的说明
+### 关于工作流程的说明
 
 本规范使用的工作流程，在很大程度上参考了 **Github flow** 规范，其最大特点就是操作简单，对于"持续发布"的产品，可以说是最合适的流程。
 
